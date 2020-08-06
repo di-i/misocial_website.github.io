@@ -1,0 +1,205 @@
+// ===================== fonts =============================== //
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap');
+
+// ===================== / fonts =============================== //
+
+
+
+// ===================== mixins =============================== //
+@mixin font-main {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+
+}
+
+@mixin second-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+@mixin note {
+    margin-top: 30vh;
+
+    &-info {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    &__title {
+        margin-bottom: 2vh;
+
+        font-size: 46px;
+        line-height: 50px;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+    }
+
+    &__text {
+        margin-bottom: 3vh;
+
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: 300;
+    }
+
+    &__links {
+
+        &-start,
+        &-explore {
+            padding: 1vh 2vw;
+            background-color: #fff;
+            box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+            border-radius: 25px;
+            font-size: 12px;
+            line-height: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #c2c9db;
+        }
+
+        &-start:hover,
+        &-explore:hover {
+            background-color: #6e45e2;
+            color: #fff;
+            transition: all 1s ease-in-out;
+            transform: scale(0.899);
+        }
+
+
+
+    }
+}
+
+
+// ===================== / mixins =============================== //
+
+
+
+
+// ===================== variables =============================== //
+
+
+
+// ===================== / variables =============================== //
+
+
+
+// ===================== common =============================== //
+a,
+button {
+    cursor: pointer;
+}
+
+a:active,
+button:active {
+    opacity: .2;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+// ===================== / common  =============================== //
+
+
+
+// ===================== header  =============================== //
+
+.header {
+    @include font-main();
+
+    height: 110vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+
+    background: url("../img/header_bg.png") no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .logo {
+        &__name {
+            margin-top: 1vh;
+
+            font-size: 30px;
+            line-height: 29px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+
+    }
+
+    .nav {
+        margin-top: 2vh;
+
+        &__item {
+
+            &-link {
+                color: #fff;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    .wrap {
+        margin-top: 2vh;
+
+        .button {
+
+            border: 1px solid #fff;
+            padding: 1vh 2vw;
+            border-radius: 20px;
+
+            color: #fff;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+
+
+    }
+
+    .note {
+        @include note();
+    }
+
+
+
+    .bi {
+        margin-top: 14vh;
+        width: 34px;
+        height: 34px;
+        box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+        border-radius: 32px;
+        background-color: #fff;
+        cursor: pointer;
+
+    }
+
+    .arrow:hover {
+        transform: scale(1.1);
+        transition: all 0.6 ease-in-out;
+    }
+}
+
+// ===================== / header  =============================== //
+
+
+.choose {
+    .note {
+        @include note();
+    }
+}

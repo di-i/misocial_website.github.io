@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap");
+a,
+button {
+  cursor: pointer;
+}
+
+a:active,
+button:active {
+  opacity: 0.2;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.header {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  height: 110vh;
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  background: url("../img/header_bg.png") no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.header .logo__name {
+  margin-top: 1vh;
+  font-size: 30px;
+  line-height: 29px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.header .nav {
+  margin-top: 2vh;
+}
+.header .nav__item-link {
+  color: #fff;
+}
+.header .nav__item-link:hover {
+  opacity: 0.7;
+}
+.header .wrap {
+  margin-top: 2vh;
+}
+.header .wrap .button {
+  border: 1px solid #fff;
+  padding: 1vh 2vw;
+  border-radius: 20px;
+  color: #fff;
+}
+.header .wrap .button:hover {
+  opacity: 0.7;
+}
+.header .note {
+  margin-top: 30vh;
+}
+.header .note-info {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.header .note__title {
+  margin-bottom: 2vh;
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.header .note__text {
+  margin-bottom: 3vh;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.header .note__links-start, .header .note__links-explore {
+  padding: 1vh 2vw;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c2c9db;
+}
+.header .note__links-start:hover, .header .note__links-explore:hover {
+  background-color: #6e45e2;
+  color: #fff;
+  transition: all 1s ease-in-out;
+  transform: scale(0.899);
+}
+.header .bi {
+  margin-top: 14vh;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+  border-radius: 32px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.header .arrow:hover {
+  transform: scale(1.1);
+  transition: all 0.6 ease-in-out;
+}
+
+.choose .note {
+  margin-top: 30vh;
+}
+.choose .note-info {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.choose .note__title {
+  margin-bottom: 2vh;
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.choose .note__text {
+  margin-bottom: 3vh;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.choose .note__links-start, .choose .note__links-explore {
+  padding: 1vh 2vw;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c2c9db;
+}
+.choose .note__links-start:hover, .choose .note__links-explore:hover {
+  background-color: #6e45e2;
+  color: #fff;
+  transition: all 1s ease-in-out;
+  transform: scale(0.899);
+}
