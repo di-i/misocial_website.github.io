@@ -113,7 +113,7 @@ a:hover {
 }
 
 .choose {
-  height: 110vh;
+  height: 115vh;
   background: url("../img/choose_bg.png") no-repeat;
   background-size: cover;
 }
@@ -180,4 +180,57 @@ a:hover {
 }
 .choose .note__title {
   color: #4f4f6f;
+}
+
+.features {
+  background: #6681EA;
+  background: linear-gradient(45deg, #6681EA 0%, #1C6EA4 0%, #7E43AA 100%);
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  height: 180vh;
+  padding-top: 8vh;
+}
+.features-info {
+  color: #fff;
+}
+.features-info p {
+  font-size: 14px;
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.features-info__title {
+  font-size: 40px;
+  line-height: 72px;
+  letter-spacing: -0.04em;
+}
+.features .parts {
+  margin-top: 10vh;
+  color: #fff;
+}
+.features .parts__item {
+  margin-top: 3vh;
+  margin-right: 2vw;
+}
+.features .parts__item-col_title {
+  margin-bottom: 3vh;
+  font-size: 20px;
+  font-weight: 500;
+}
+.features .parts__item-col_text {
+  width: 19vw;
+  font-size: 16px;
+  font-weight: 300;
+}
+.features .parts__item-icon {
+  margin-right: 2vw;
+}
+.features .owl-carousel {
+  margin-top: 20vh;
+  margin-left: 6vw;
+}
+.features .owl-carousel .owl__item img {
+  border-radius: 5px;
 }
