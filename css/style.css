@@ -26,6 +26,22 @@ a:hover {
   background-size: cover;
   color: #fff;
 }
+.header .bi {
+  margin-top: 14vh;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+  border-radius: 32px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.header .bi:hover {
+  background-color: #6e45e2;
+}
+.header .arrow:hover {
+  transform: scale(1.1);
+  transition: all 0.6 ease-in-out;
+}
 .header .logo__name {
   margin-top: 1vh;
   font-size: 30px;
@@ -95,7 +111,13 @@ a:hover {
   transition: all 1s ease-in-out;
   transform: scale(0.899);
 }
-.header .bi {
+
+.choose {
+  height: 110vh;
+  background: url("../img/choose_bg.png") no-repeat;
+  background-size: cover;
+}
+.choose .bi {
   margin-top: 14vh;
   width: 34px;
   height: 34px;
@@ -104,11 +126,13 @@ a:hover {
   background-color: #fff;
   cursor: pointer;
 }
-.header .arrow:hover {
+.choose .bi:hover {
+  background-color: #6e45e2;
+}
+.choose .arrow:hover {
   transform: scale(1.1);
   transition: all 0.6 ease-in-out;
 }
-
 .choose .note {
   margin-top: 30vh;
 }
@@ -149,4 +173,11 @@ a:hover {
   color: #fff;
   transition: all 1s ease-in-out;
   transform: scale(0.899);
+}
+.choose .note-info, .choose .note__text {
+  color: #9fa4af;
+  font-size: 12px;
+}
+.choose .note__title {
+  color: #4f4f6f;
 }
