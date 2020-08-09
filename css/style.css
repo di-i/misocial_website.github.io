@@ -234,3 +234,64 @@ a:hover {
 .features .owl-carousel .owl__item img {
   border-radius: 5px;
 }
+
+.testimonials {
+  margin-top: 20vh;
+}
+.testimonials-top {
+  margin-bottom: 4vh;
+}
+.testimonials-top .info {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9fa4af;
+}
+.testimonials-top .title {
+  margin-bottom: 2vh;
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #4f4f6f;
+}
+.testimonials .response .owl-carousel .owl__item blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  font-style: italic;
+  color: #4f4f6f;
+}
+.testimonials .response .owl-carousel .owl__item .fa {
+  color: #9fa4af;
+}
+.testimonials .response .owl-carousel .owl__item .fa-quote-left {
+  margin-left: 1vw;
+}
+.testimonials .response .owl-carousel .owl__item .person img {
+  width: 64px;
+  height: 64px;
+  margin-right: 2vw;
+}
+.testimonials .response .owl-carousel .owl__item .person p {
+  margin-top: 2vh;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9fa4af;
+}
+.testimonials .response .owl-carousel .owl__item .person span {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  text-transform: none;
+  color: #9fa4af;
+}

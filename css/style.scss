@@ -26,20 +26,11 @@
     margin-top: 30vh;
 
     &-info {
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        @include info();
     }
 
     &__title {
-        margin-bottom: 2vh;
-
-        font-size: 46px;
-        line-height: 50px;
-        font-weight: 500;
-        letter-spacing: -0.04em;
+        @include title();
     }
 
     &__text {
@@ -109,12 +100,31 @@
     background: linear-gradient(45deg, #6681EA 0%, #1C6EA4 0%, #7E43AA 100%);
 }
 
+@mixin info {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@mixin title {
+    margin-bottom: 2vh;
+
+    font-size: 46px;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+
 // ===================== / mixins =============================== //
 
 
 
 
 // ===================== variables =============================== //
+
 
 
 
@@ -315,11 +325,78 @@ a:hover {
 
             img {
                 border-radius: 5px;
-                
-}
+
             }
         }
     }
+}
 
+.testimonials {
+    margin-top: 20vh;
 
+    &-top {
+        margin-bottom: 4vh;
 
+        .info {
+            @include info();
+
+            color: #9fa4af;
+        }
+
+        .title {
+            @include title();
+            color: #4f4f6f;
+        }
+    }
+
+    .response {
+        .owl-carousel {
+            .owl__item {
+                blockquote {
+                    @include second-main();
+                    font-size: 24px;
+                    line-height: 36px;
+                    font-weight: 400;
+                    font-style: italic;
+                    color: #4f4f6f;
+                }
+
+                .fa {
+                    color: #9fa4af;
+                }
+
+                .fa-quote-left {
+                    margin-left: 1vw;
+                }
+
+                .person {
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        margin-right: 2vw;
+                    }
+
+                    p {
+                        margin-top: 2vh;
+
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                        color: #9fa4af;
+                    }
+
+                    span {
+                        
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 300;
+                        text-transform: none;
+                        color: #9fa4af;
+                    }
+                }
+            }
+        }
+    }
+}
