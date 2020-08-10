@@ -527,3 +527,90 @@ a:hover {
 }
 
 // ===================== / team =============================== //
+
+
+// ===================== articles =============================== //
+
+.articles {
+    margin-top: 10vh;
+    background-color: #f9fafc;
+
+    .note {
+        @include note();
+        margin-top: 15vh;
+
+        &__text {
+            width: 33vw;
+
+            text-transform: none;
+        }
+
+
+
+        &__links {
+            margin-top: 15vh;
+        }
+    }
+
+    .owl-theme {
+        .owl__item {
+            width: 40vw;
+            height: 40vh;
+            padding-left: 3vw;
+            box-shadow: 0px 0px 25px 5px rgba(203, 203, 223, 0.3);
+            border-radius: 10px;
+            background-color: #fff;
+
+            .title {
+                font-size: 18px;
+                line-height: 72px;
+                font-weight: 500;
+                letter-spacing: 0.04em;
+                color: #4f4f6f;
+            }
+
+            .data {
+                margin-top: -6vh;
+                font-size: 13px;
+                line-height: 28px;
+                font-weight: 400;
+                color: #9fa4af;
+            }
+
+            .text {
+                width: 33vw;
+                font-size: 14px;
+                line-height: 28px;
+                font-weight: 400;
+                color: #9fa4af;
+            }
+
+            object {
+                width: 3vw;
+                height: 2vh;
+            }
+
+            .count-comments {
+                margin-top: -1vh;
+                font-size: 11px;
+                line-height: 28px;
+                font-weight: 400;
+                color: #9fa4af;
+            }
+
+            .fa {
+                margin-left: 10vw;
+                background-color: purple;
+                width: 2vw;
+                height: 4vh;
+                border-radius: 5px;
+                color: white;
+                
+            }
+
+            .fa-user {}
+        }
+    }
+}
+
+// ===================== / articles =============================== //

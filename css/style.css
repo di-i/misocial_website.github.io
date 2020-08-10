@@ -482,3 +482,107 @@ a:hover {
   font-weight: 300;
   text-transform: none;
 }
+
+.articles {
+  margin-top: 10vh;
+  background-color: #f9fafc;
+}
+.articles .note {
+  margin-top: 30vh;
+  margin-top: 15vh;
+}
+.articles .note-info {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9fa4af;
+}
+.articles .note__title {
+  margin-bottom: 2vh;
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #4f4f6f;
+}
+.articles .note__text {
+  margin-bottom: 3vh;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.articles .note__links-start, .articles .note__links-explore {
+  padding: 1vh 2vw;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c2c9db;
+}
+.articles .note__links-start:hover, .articles .note__links-explore:hover {
+  background-color: #6e45e2;
+  color: #fff;
+  transition: all 1s ease-in-out;
+  transform: scale(0.899);
+}
+.articles .note__text {
+  width: 33vw;
+  text-transform: none;
+}
+.articles .note__links {
+  margin-top: 15vh;
+}
+.articles .owl-theme .owl__item {
+  width: 40vw;
+  height: 40vh;
+  padding-left: 3vw;
+  box-shadow: 0px 0px 25px 5px rgba(203, 203, 223, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+.articles .owl-theme .owl__item .title {
+  font-size: 18px;
+  line-height: 72px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #4f4f6f;
+}
+.articles .owl-theme .owl__item .data {
+  margin-top: -6vh;
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #9fa4af;
+}
+.articles .owl-theme .owl__item .text {
+  width: 33vw;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #9fa4af;
+}
+.articles .owl-theme .owl__item object {
+  width: 3vw;
+  height: 2vh;
+}
+.articles .owl-theme .owl__item .count-comments {
+  margin-top: -1vh;
+  font-size: 11px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #9fa4af;
+}
+.articles .owl-theme .owl__item .fa {
+  margin-left: 10vw;
+  background-color: purple;
+  width: 2vw;
+  height: 4vh;
+  border-radius: 5px;
+  color: white;
+}
