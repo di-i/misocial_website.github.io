@@ -18,6 +18,10 @@ a:hover {
   color: #6e45e2;
 }
 
+.owl-carousel {
+  outline: none;
+}
+
 .header {
   font-family: "Maven Pro", sans-serif;
   font-size: 16px;
@@ -579,8 +583,8 @@ a:hover {
   color: #9fa4af;
 }
 .articles .owl-theme .owl__item .fa {
-  margin-left: 10vw;
-  background-color: purple;
+  margin-left: 14vw;
+  background-color: pink;
   width: 2vw;
   height: 4vh;
   border-radius: 5px;

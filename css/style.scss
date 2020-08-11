@@ -156,6 +156,11 @@ a:hover {
     color: #6e45e2;
 }
 
+
+.owl-carousel {
+    outline: none;
+}
+
 // ===================== / common  =============================== //
 
 
@@ -552,6 +557,8 @@ a:hover {
         }
     }
 
+
+
     .owl-theme {
         .owl__item {
             width: 40vw;
@@ -599,8 +606,8 @@ a:hover {
             }
 
             .fa {
-                margin-left: 10vw;
-                background-color: purple;
+                margin-left: 14vw;
+                background-color: pink;
                 width: 2vw;
                 height: 4vh;
                 border-radius: 5px;
