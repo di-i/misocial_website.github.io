@@ -23,7 +23,6 @@
 }
 
 @mixin note {
-    margin-top: 30vh;
 
     &-info {
         @include info();
@@ -39,23 +38,30 @@
         font-size: 14px;
         line-height: 28px;
         font-weight: 300;
+
+        @media (max-width: $screen-md-max) {
+            line-height: 24px;
+            font-size: 12px;
+        }
     }
 
     &__links {
 
         &-start,
         &-explore {
-           @include btn();
+            @include btn();
         }
 
         &-start:hover,
         &-explore:hover {
-           @include btn-hover();
+            @include btn-hover();
         }
 
 
 
     }
+
+    @media (max-width: $screen-md-max) {}
 }
 
 @mixin btn {
@@ -64,9 +70,10 @@
     background-color: #fff;
     box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
     border-radius: 25px;
-    font-size: 12px;
-    line-height: 32px;
+    font-size: 10px;
+    line-height: 28px;
     font-weight: 600;
+
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #c2c9db;
@@ -82,8 +89,11 @@
 
 
 @mixin arrow-down {
+    .arrow {
+        padding-top: 20vh;
+    }
+
     .bi {
-        margin-top: 14vh;
         width: 34px;
         height: 34px;
         box-shadow: 0px 0px 19px 2px rgba(203, 203, 223, 0.5);
@@ -101,6 +111,8 @@
         transform: scale(1.1);
         transition: all 1 ease-in-out;
     }
+
+    @media (max-width: $screen-md-max) {}
 }
 
 @mixin bg-gradient {
@@ -127,10 +139,115 @@
     font-weight: 500;
     letter-spacing: -0.04em;
     color: $color-dark;
+
+    @media (max-width: $screen-md-max) {
+        font-size: 30px;
+    }
 }
 
 
+@mixin burger-menu {
+    #sidebar-wrapper {
+        position: fixed;
+        z-index: 2;
+        right: 0;
+        width: 20vw;
+        height: 60vh;
+        transition: all 0.4s ease 0s;
+        transform: translateX(250px);
+        background: rgba(255, 255, 255, 0.8);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        width: 40vw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+
+
+
+    }
+
+
+
+    .sidebar-nav li.sidebar-nav-item a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        padding: 15px;
+        font-weight: 500;
+
+    }
+
+    .sidebar-nav li a:hover {
+        text-decoration: none;
+        transform: scale(1.1);
+        transition: all 0.5 ease;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus {
+        text-decoration: none;
+    }
+
+    .sidebar-nav>.sidebar-brand {
+        font-size: 1.2rem;
+        background: rgba(52, 58, 64, 0.1);
+        height: 80px;
+        line-height: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+
+    .sidebar-nav>.sidebar-brand a {
+        color: #fff;
+    }
+
+    .sidebar-nav>.sidebar-brand a:hover {
+        color: #fff;
+        background: none;
+    }
+
+    #sidebar-wrapper.active {
+        right: 310px;
+        width: 50vw;
+        transition: all 0.4s ease 0s;
+    }
+
+    .menu-toggle {
+        position: fixed;
+        right: 14vh;
+        top: 3vh;
+        text-align: center;
+        text-decoration: none;
+        background: transparent;
+        line-height: 50px;
+        z-index: 60;
+
+        .fa-bars {
+            color: #a9a9a9;
+            z-index: 60;
+        }
+
+        .fa {
+            margin-right: 3vw;
+            margin-top: 6vh;
+        }
+    }
+
+    .menu-toggle:focus,
+    .menu-toggle:hover {
+        text-decoration: none;
+        opacity: 0.6;
+    }
+
+}
 
 // ===================== / mixins =============================== //
 
@@ -142,6 +259,12 @@
 $color-dark: #4f4f6f;
 $color-grey: #9fa4af;
 $color-violet: #6e45e2;
+
+
+$screen-xs-max: 575px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
 
 
 // ===================== / variables =============================== //
@@ -185,10 +308,10 @@ a:hover {
 // ===================== header  =============================== //
 
 .header {
+    @include burger-menu();
     @include font-main();
     @include arrow-down();
 
-    height: 120vh;
     padding-top: 6vh;
     padding-bottom: 6vh;
 
@@ -209,7 +332,7 @@ a:hover {
     }
 
     .nav {
-        margin-top: 2vh;
+        padding-top: 2vh;
 
         &__item {
 
@@ -229,10 +352,9 @@ a:hover {
         .button {
 
             border: 1px solid #fff;
-            padding: 2vh 2vw;
             border-radius: 20px;
-
             color: #fff;
+            padding: 1.5vh 2vw;
 
             &:hover {
                 opacity: .7;
@@ -244,12 +366,48 @@ a:hover {
 
     .note {
         @include note();
+        padding-top: 15vh;
 
         &-info,
         &__title {
             color: #fff;
         }
+
+        &__links-start {
+            margin-right: 1vw;
+
+        }
+
+        &__links-explore {}
     }
+
+    .menu {
+        display: none;
+    }
+
+    @media (max-width: $screen-lg-max) {}
+
+    @media (max-width: $screen-md-max) {
+        .menu {
+            display: block;
+        }
+
+        .note {
+            padding-top: 6vh;
+        }
+
+        .nav-wrap {
+            display: none;
+        }
+
+        .wrap {
+            display: none;
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {}
+
+    @media (max-width: $screen-xs-max) {}
 
 
 
@@ -265,12 +423,12 @@ a:hover {
 .choose {
     @include arrow-down();
 
-    height: 120vh;
-    background: url("../img/choose_bg.png") no-repeat;
+    background: url("../img/choose_bg.png") no-repeat center;
     background-size: cover;
 
     .note {
         @include note();
+        padding-top: 12vh;
 
         &-info,
         &__text {
@@ -286,18 +444,34 @@ a:hover {
     .bi {
         margin-top: 10vh;
     }
+
+    @media (max-width: $screen-lg-max) {}
+
+    @media (max-width: $screen-md-max) {}
+
+    @media (max-width: $screen-sm-max) {
+        .note {
+            padding-top: 8vh;
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {}
 }
 
 
 // ===================== / choose =============================== //
 
 
+
+
+// ===================== features  =============================== //
+
 .features {
     @include bg-gradient();
     @include font-main();
-
-    height: 180vh;
     padding-top: 8vh;
+
+
 
     &-info {
         color: #fff;
@@ -335,6 +509,7 @@ a:hover {
                     margin-bottom: 3vh;
                     font-size: 20px;
                     font-weight: 500;
+                    width: 20vw;
                 }
 
                 &_text {
@@ -357,9 +532,7 @@ a:hover {
 
 
     .owl-carousel {
-        margin-top: 10vh;
-        margin-left: 6vw;
-        margin-bottom: 10vh;
+        padding-top: 10vh;
         padding-bottom: 5vh;
 
         .owl__item {
@@ -370,16 +543,37 @@ a:hover {
             }
         }
     }
+
+
+    @media (max-width: $screen-sm-max) {
+        .parts {
+            &__item {
+                margin-right: 5vw;
+
+                &-col {
+                    &_text {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
+
+// ===================== / features  =============================== //
+
 
 
 // ===================== testimonials  =============================== //
 
 
 .testimonials {
-    margin-top: 30vh;
-    margin-bottom: 10vh;
+    padding-top: 15vh;
     @include arrow-down();
+
+    .arrow {
+        padding-top: 2vh;
+    }
 
     &-top {
         margin-bottom: 4vh;
@@ -452,9 +646,8 @@ a:hover {
 // ===================== about =============================== //
 
 .about {
-    height: 105vh;
-    padding-top: 15vh;
-
+    padding-top: 6vh;
+    padding-bottom: 6vh;
     background: url("../img/about_bg.png") no-repeat;
     background-size: cover;
 
@@ -466,7 +659,8 @@ a:hover {
 
     .note {
         @include note();
-        margin-top: 10vh;
+        padding-top: 0;
+
 
         &__text {
             color: #9fa4af;
@@ -491,7 +685,13 @@ a:hover {
         }
     }
 
+    @media (max-width: $screen-md-max) {
 
+
+        .logo {
+            padding-top: 10vh;
+        }
+    }
 }
 
 // ===================== / about =============================== //
@@ -502,7 +702,11 @@ a:hover {
 
 .team {
     @include arrow-down();
-    padding-top: 15vh;
+    padding-top: 10vh;
+
+    .arrow {
+        padding-top: 2vh;
+    }
 
     &-info {
         &__title {
@@ -552,6 +756,19 @@ a:hover {
             }
         }
     }
+
+
+    @media (max-width: $screen-sm-max) {
+        &-list {
+            &__item {
+
+                &-name {
+                    font-size: 10px;
+                }
+
+            }
+        }
+    }
 }
 
 // ===================== / team =============================== //
@@ -560,13 +777,13 @@ a:hover {
 // ===================== articles =============================== //
 
 .articles {
-    margin-top: 10vh;
+    padding-top: 5vh;
     background-color: #f9fafc;
-    padding-bottom: 10vh;
+
 
     .note {
         @include note();
-        margin-top: 15vh;
+
 
         &__text {
             width: 33vw;
@@ -577,7 +794,7 @@ a:hover {
 
 
         &__links {
-            margin-top: 15vh;
+            padding-top: 5vh;
         }
     }
 
@@ -585,16 +802,18 @@ a:hover {
 
     .slide-three {
         margin-top: 3vh;
+        box-sizing: border-box;
 
         .owl__item {
-            width: 35vw;
-            height: 40vh;
+            display: flex;
             padding-left: 3vw;
-        
-            margin-right: 6vw;
-            box-shadow: 0px 0px 25px 5px rgba(203, 203, 223, 0.3);
+            width: 30vw !important;
+            height: 23vw !important;
+
+
             border-radius: 10px;
             background-color: #fff;
+
 
             .title {
                 font-size: 18px;
@@ -605,7 +824,7 @@ a:hover {
             }
 
             .data {
-                margin-top: -6vh;
+                margin-top: -2vh;
                 font-size: 13px;
                 line-height: 28px;
                 font-weight: 400;
@@ -613,7 +832,8 @@ a:hover {
             }
 
             .text {
-                width: 25vw;
+                width: auto;
+                padding-right: 2vw;
                 font-size: 12px;
                 line-height: 16px;
                 font-weight: 400;
@@ -636,13 +856,15 @@ a:hover {
                 line-height: 28px;
                 font-weight: 400;
                 color: #9fa4af;
+
             }
 
             .fa {
 
                 background-color: pink;
-                width: 2vw;
-                height: 4vh;
+                padding: 0.2vh 0.6vw;
+                width: 18px;
+                height: 20px;
                 border-radius: 5px;
                 color: white;
 
@@ -655,6 +877,105 @@ a:hover {
     .arrow {
         @include arrow-down();
     }
+
+    @media (max-width: $screen-lg-max) {
+        .owl__item {
+
+            width: 30vw !important;
+            height: 23vw !important;
+        }
+    }
+
+    @media (max-width: $screen-md-max) {
+        .slide-three {
+            margin-top: 3vh;
+
+            .owl__item {
+
+                width: 46vw !important;
+                height: 33vw !important;
+                padding-left: 3vw;
+
+                margin-right: 0;
+
+                border-radius: 10px;
+                background-color: #fff;
+
+                .title {
+                    font-size: 14px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    letter-spacing: 0.04em;
+                    color: #4f4f6f;
+                }
+
+                .data {
+                    margin-top: -4vh;
+                    font-size: 9px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    color: #9fa4af;
+                }
+
+                .text {
+                    width: auto;
+                    padding-right: 1vw;
+                    font-size: 10px;
+                    line-height: 14px;
+                    font-weight: 400;
+                    color: #9fa4af;
+                    margin-top: -2vh;
+                }
+
+                object {
+                    width: 3vw;
+                    height: 2vh;
+                }
+
+                img {
+                    width: 30%;
+                    margin-left: -3vw;
+                }
+
+                .count-comments {
+                    margin-top: -1vh;
+                    font-size: 11px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    color: #9fa4af;
+                }
+
+                .fa {
+
+                    background-color: pink;
+                   
+                    border-radius: 5px;
+                    color: white;
+
+                }
+
+
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm-max) {}
+
+    @media (max-width: $screen-xs-max) {
+        .slide-three {
+            .owl__item {
+
+                width: 80vw !important;
+                height: 50vw !important;
+
+                .fa {
+
+                   
+                   
+                }
+            }
+        }
+    }
 }
 
 // ===================== / articles =============================== //
@@ -664,15 +985,15 @@ a:hover {
 // ===================== notification =============================== //
 
 .notification {
-    margin-top: 0;
-    padding-top: 0;
-    height: 105vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+
 
     background: url("../img/map.png") no-repeat top center, linear-gradient(45deg, #6681EA 0%, #1C6EA4 0%, #7E43AA 100%);
 
     .note {
-        margin-top: 0;
         @include note();
+
 
         &-info,
         &__title,
@@ -690,16 +1011,18 @@ a:hover {
 
 
 .footer {
-    height: 30vh;
+
     padding-top: 6vh;
+    padding-bottom: 4vh;
     background-color: #fff;
 
     .logo {
         margin-top: 1vh;
         margin-left: 4vw;
+
         &__name {
             margin-top: 1vh;
-            
+
             font-size: 20px;
             line-height: 29px;
             font-weight: 700;
@@ -730,12 +1053,12 @@ a:hover {
 
             @include btn();
             border: 2px solid $color-violet;
-            padding: 2vh 2vw;
-          
+
+
 
             &:hover {
                 @include btn-hover();
-                
+
             }
         }
 
