@@ -92,27 +92,47 @@ $(document).ready(function(){
         autoplay:true, //Автозапуск слайдера
         lazyLoad: false,
         smartSpeed:3000, //Время движения слайда
-        stagePadding: 94,
         autoplayTimeout:5000, //Время смены слайда
 
         responsive:{ //Адаптация в зависимости от разрешения экрана
 
             0:{
 
-                items:1
+                items:1,
+                stagePadding: 0,
 
             },
 
             600:{
 
-                items:2
+                items:1,
+                stagePadding: 0,
 
             },
 
+            800: {
+                items:2,
+                stagePadding: 0,
+                
+            },
+
             1000:{
+               
+                items:2,
+                stagePadding: 24,
+               
 
-                items:2
+            },
 
+            1200: {
+                stagePadding: 24,
+                items:2,
+            },
+
+            2000: {
+                items: 3,
+                stagePadding: 24,
+                
             }
 
         }
