@@ -77,6 +77,11 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #c2c9db;
+
+    @media (max-width: $screen-xs-max) {
+        font-size: 8px;
+        padding: 5px 12px;
+    }
 }
 
 @mixin btn-hover {
@@ -151,21 +156,29 @@
         position: fixed;
         z-index: 2;
         right: 0;
-        width: 20vw;
+        width: 10vw;
         height: 60vh;
         transition: all 0.4s ease 0s;
         transform: translateX(250px);
         background: rgba(255, 255, 255, 0.8);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+        @media (max-width: $screen-xs-max) {
+            width: 25vw;
+        }
     }
 
     .sidebar-nav {
         position: absolute;
         top: 0;
-        width: 40vw;
+        width: 20vw;
         margin: 0;
         padding: 0;
         list-style: none;
+
+        @media (max-width: $screen-xs-max) {
+            width: 25vw;
+        }
 
 
 
@@ -177,9 +190,10 @@
     .sidebar-nav li.sidebar-nav-item a {
         display: block;
         text-decoration: none;
-        color: #000;
+        color: $color-violet;
         padding: 15px;
         font-weight: 500;
+        text-align: center;
 
     }
 
@@ -216,13 +230,17 @@
 
     #sidebar-wrapper.active {
         right: 310px;
-        width: 50vw;
-        transition: all 0.4s ease 0s;
+        width: 30vw;
+        transition: all 0.6s ease 0s;
+
+        @media (max-width: $screen-xs-max) {
+            width: 50vw;
+        }
     }
 
     .menu-toggle {
         position: fixed;
-        right: 14vh;
+        right: 4vh;
         top: 3vh;
         text-align: center;
         text-decoration: none;
@@ -407,7 +425,23 @@ a:hover {
 
     @media (max-width: $screen-sm-max) {}
 
-    @media (max-width: $screen-xs-max) {}
+    @media (max-width: $screen-xs-max) {
+        .note {
+            justify-content: center;
+            align-items: center;
+
+            &__text {
+                text-align: center;
+            }
+        }
+
+        .logo {
+            &__name {
+
+                font-size: 20px;
+            }
+        }
+    }
 
 
 
@@ -452,6 +486,17 @@ a:hover {
     @media (max-width: $screen-sm-max) {
         .note {
             padding-top: 8vh;
+
+            &-info,
+            &__text {
+                color: #4f4f6f;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            &__title {
+                color: #4f4f6f;
+            }
         }
     }
 
@@ -519,10 +564,9 @@ a:hover {
                 }
             }
 
+
             &-icon {
                 margin-right: 2vw;
-
-
 
             }
 
@@ -551,10 +595,27 @@ a:hover {
                 margin-right: 5vw;
 
                 &-col {
+                    &_title {
+                        font-size: 10px;
+                    }
+
                     &_text {
                         display: none;
                     }
                 }
+            }
+        }
+
+        &-info {
+            &__title {
+                font-size: 25px;
+                line-height: 32px;
+                text-align: center;
+            }
+
+            &__subtitle {
+                font-size: 12px;
+                text-align: center;
             }
         }
     }
@@ -692,6 +753,33 @@ a:hover {
             padding-top: 10vh;
         }
     }
+
+    @media (max-width: $screen-sm-max) {
+
+        .info,
+        .hyphen {
+            color: #fff;
+        }
+
+        .title {
+            color: #fff;
+
+        }
+
+        .note {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__text {
+                color: #fff;
+            }
+
+            &_bottom {}
+
+        }
+    }
 }
 
 // ===================== / about =============================== //
@@ -766,6 +854,14 @@ a:hover {
                     font-size: 10px;
                 }
 
+            }
+        }
+
+        &-info {
+            &__subtitle {
+
+                width: 50vw;
+                font-size: 12px;
             }
         }
     }
@@ -859,16 +955,7 @@ a:hover {
 
             }
 
-            .fa {
 
-                background-color: pink;
-                padding: 0.2vh 0.6vw;
-                width: 18px;
-                height: 20px;
-                border-radius: 5px;
-                color: white;
-
-            }
 
 
         }
@@ -897,9 +984,6 @@ a:hover {
                 padding-left: 3vw;
 
                 margin-right: 0;
-
-                border-radius: 10px;
-                background-color: #fff;
 
                 .title {
                     font-size: 14px;
@@ -945,14 +1029,7 @@ a:hover {
                     color: #9fa4af;
                 }
 
-                .fa {
 
-                    background-color: pink;
-                   
-                    border-radius: 5px;
-                    color: white;
-
-                }
 
 
             }
@@ -966,16 +1043,22 @@ a:hover {
             .owl__item {
 
                 width: 80vw !important;
-                height: 50vw !important;
-
-                .fa {
-
-                   
-                   
-                }
+                height: 200px !important;
             }
         }
     }
+
+    @media (max-width: 350px) {
+        .slide-three {
+            .owl__item {
+
+                width: 90vw !important;
+                height: 250px !important;
+            }
+        }
+    }
+
+
 }
 
 // ===================== / articles =============================== //
@@ -999,6 +1082,7 @@ a:hover {
         &__title,
         &__text {
             color: #fff;
+            text-align: center;
         }
     }
 }
@@ -1077,10 +1161,24 @@ a:hover {
     .fa {
         margin-left: 1vw;
         color: $color-grey;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all 1s ease;
+        }
     }
 
+ @media (max-width: $screen-sm-max) {
+        .rights {
+            font-size: 10px;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        .rights {
+            font-size: 7px;
+        }
+    }
 }
-
 
 
 // =================================== / footer ========================================== //
