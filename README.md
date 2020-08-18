@@ -32,10 +32,11 @@ Test website. Adaptive landing page.
 
 ![Screen Shot 2020-08-18 at 7 33 47 PM](https://user-images.githubusercontent.com/55539864/90541438-502c3680-e18b-11ea-8d29-2f35e87c29aa.png)
 
-![btn](https://user-images.githubusercontent.com/55539864/90542518-ea40ae80-e18c-11ea-9334-0e6d9556fdb2.gif)
+
 
 >***Owl-carousel***  
-![carousel](https://user-images.githubusercontent.com/55539864/90541699-b0bb7380-e18b-11ea-8974-43e5709e1542.gif)
-![owl](https://user-images.githubusercontent.com/55539864/90541692-aef1b000-e18b-11ea-8cba-3ff0363fb7df.gif)
+
+![carousel](https://user-images.githubusercontent.com/55539864/90559732-ae1a4780-e1a6-11ea-8189-6dfc48ac68e6.gif)
+
 
 
