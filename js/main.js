@@ -12,9 +12,9 @@ $(document).ready(function(){
             nav:false, //Отключил навигацию
             autoplay:true, //Автозапуск слайдера
             dots: true,
-            smartSpeed:3000, //Время движения слайда
+            smartSpeed:2000, //Время движения слайда
   
-            autoplayTimeout:5000, //Время смены слайда
+            autoplayTimeout:3000, //Время смены слайда
 
             responsive:{ //Адаптация в зависимости от разрешения экрана
   
@@ -91,8 +91,8 @@ $(document).ready(function(){
         nav:false, //Отключил навигацию
         autoplay:true, //Автозапуск слайдера
         lazyLoad: false,
-        smartSpeed:3000, //Время движения слайда
-        autoplayTimeout:5000, //Время смены слайда
+        smartSpeed:2000, //Время движения слайда
+        autoplayTimeout:3000, //Время смены слайда
 
         responsive:{ //Адаптация в зависимости от разрешения экрана
 
