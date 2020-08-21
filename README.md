@@ -34,9 +34,5 @@ Test website. Adaptive landing page.
 
 
 
->***Owl-carousel***  
-
-![carousel (1)](https://user-images.githubusercontent.com/55539864/90560323-95f6f800-e1a7-11ea-9538-6a597860a666.gif)
-
 
 
